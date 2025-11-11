@@ -9,49 +9,54 @@
   <meta property="og:description" content="Book a reading with Teija’s Sacred Offerings." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/profile.jpg" />
-  <meta name="theme-color" content="#8b5cf6" />
+  <meta name="theme-color" content="#d8c6ff" />
   <style>
     :root {
-      --bg: #0b0a10;
-      --card: #12101a;
-      --muted: #c7c3d9;
-      --text: #f7f5ff;
-      --accent: #b689ff;
-      --accent-2: #ffd166;
-      --ring: rgba(182,137,255,.35);
-      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --bg: #f5f4ff; /* soft lavender base */
+      --card: #ffffff; /* white cards */
+      --muted: #6a5b89; /* soft plum text */
+      --text: #3b2e4a; /* deeper purple for text */
+      --accent: #b3a0ff; /* light pastel purple */
+      --accent-2: #a8e3ff; /* light pastel blue */
+      --ring: rgba(163, 147, 255, .35);
+      --shadow: 0 10px 25px rgba(176, 157, 255, .25);
     }
     *,*::before,*::after{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:radial-gradient(1200px 600px at 10% -10%, rgba(182,137,255,.25), transparent 60%), radial-gradient(1000px 500px at 110% 0%, rgba(255,209,102,.15), transparent 60%), var(--bg);}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:linear-gradient(135deg, var(--accent-2), var(--accent));}
     a{color:inherit;text-decoration:none}
+
     .container{max-width:740px;margin:0 auto;padding:28px 20px 80px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);border-radius:24px}
+
+    .card{background:var(--card);border:1px solid rgba(0,0,0,.05);box-shadow:var(--shadow);border-radius:24px}
     .header{display:flex;gap:18px;align-items:center;padding:20px}
-    .avatar{width:72px;height:72px;border-radius:50%;border:2px solid rgba(255,255,255,.1);object-fit:cover;background:#1c1926}
-    .name{font-weight:800;font-size:1.25rem;letter-spacing:.2px}
-    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(182,137,255,.08);color:var(--muted);font-size:.85rem}
+    .avatar{width:72px;height:72px;border-radius:50%;border:2px solid rgba(0,0,0,.1);object-fit:cover;background:#f0f0ff}
+    .name{font-weight:800;font-size:1.25rem;letter-spacing:.2px;color:var(--text)}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.08);background:var(--accent-2);color:#2d2d3a;font-size:.85rem;font-weight:500}
     .tag svg{opacity:.9}
     .bio{color:var(--muted);margin-top:6px;line-height:1.45}
+
     .list{display:grid;gap:14px;padding:16px}
-    .btn{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
-    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(0,0,0,.4);border-color:rgba(182,137,255,.45)}
+    .btn{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;border-radius:16px;border:1px solid rgba(0,0,0,.07);background:var(--card);box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+    .btn:hover{transform:translateY(-2px);box-shadow:0 12px 25px rgba(163, 147, 255,.3);border-color:var(--accent)}
     .btn:focus-visible{outline:none;box-shadow:0 0 0 6px var(--ring)}
     .btn-left{display:flex;align-items:center;gap:12px}
-    .btn h3{margin:0;font-size:1rem;letter-spacing:.2px}
+    .btn h3{margin:0;font-size:1rem;letter-spacing:.2px;color:var(--text)}
     .btn p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
-    .pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.85rem;background:rgba(255,255,255,.04)}
-    footer{margin-top:16px;padding:18px;color:#bfb8d8;text-align:center;font-size:.85rem}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.1);font-size:.85rem;background:var(--accent);color:white}
+
+    footer{margin-top:16px;padding:18px;color:var(--muted);text-align:center;font-size:.85rem}
     .social{display:flex;gap:10px;justify-content:center;margin-top:10px}
-    .icon{width:20px;height:20px;opacity:.9}
-    .stars{position:fixed;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:.25}
-    .stars::before,.stars::after{content:"";position:absolute;inset:0;background:radial-gradient(2px 2px at 10% 20%, #fff, transparent 55%),radial-gradient(1.5px 1.5px at 30% 80%, #fff, transparent 55%),radial-gradient(1.5px 1.5px at 60% 30%, #fff, transparent 55%),radial-gradient(2px 2px at 80% 60%, #fff, transparent 55%),radial-gradient(1.5px 1.5px at 50% 50%, #fff, transparent 55%)}
-    .stars::after{transform:translateY(20px)}
-    @media (max-width:480px){.header{padding:18px}.list{padding:12px}.btn{padding:14px 16px}}
+    .icon{width:20px;height:20px;opacity:.9;stroke:var(--muted)}
+
+    @media (max-width:480px){
+      .header{padding:18px}
+      .list{padding:12px}
+      .btn{padding:14px 16px}
+    }
   </style>
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
   <main class="container">
     <section class="card">
       <header class="header">
@@ -62,7 +67,7 @@
             <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l1.6 4.4L18 8l-4.4 1.6L12 14l-1.6-4.4L6 8l4.4-1.6L12 2z" stroke="currentColor"/></svg>
             Readings · Book here
           </div>
-          <p class="bio">Intuitive guidance • Ritual support • Heart‑centered clarity</p>
+          <p class="bio">Intuitive guidance • Ritual support • Heart-centered clarity</p>
         </div>
       </header>
 
@@ -82,7 +87,7 @@
           <div class="btn-left">
             <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8" stroke="currentColor"/></svg>
             <div>
-              <h3>Current Energy Check‑In</h3>
+              <h3>Current Energy Check-In</h3>
               <p>What’s active in your field right now.</p>
             </div>
           </div>
@@ -138,7 +143,7 @@
             <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1118 0 9 9 0 01-18 0zm9-6v6l4 2" stroke="currentColor"/></svg>
             <div>
               <h3>1–3 Month Forecast</h3>
-              <p>Short‑range path, pivots, and potentials.</p>
+              <p>Short-range path, pivots, and potentials.</p>
             </div>
           </div>
           <span class="pill">Book</span>
