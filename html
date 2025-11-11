@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teija’s Readings</title>
+  <meta name="description" content="Book a reading with Teija’s Sacred Offerings." />
+  <meta property="og:title" content="Teija’s Readings" />
+  <meta property="og:description" content="Book a reading with Teija’s Sacred Offerings." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/profile.jpg" />
+  <meta name="theme-color" content="#8b5cf6" />
+  <style>
+    :root {
+      --bg: #0b0a10;
+      --card: #12101a;
+      --muted: #c7c3d9;
+      --text: #f7f5ff;
+      --accent: #b689ff;
+      --accent-2: #ffd166;
+      --ring: rgba(182,137,255,.35);
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:radial-gradient(1200px 600px at 10% -10%, rgba(182,137,255,.25), transparent 60%), radial-gradient(1000px 500px at 110% 0%, rgba(255,209,102,.15), transparent 60%), var(--bg);}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:740px;margin:0 auto;padding:28px 20px 80px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow);border-radius:24px}
+    .header{display:flex;gap:18px;align-items:center;padding:20px}
+    .avatar{width:72px;height:72px;border-radius:50%;border:2px solid rgba(255,255,255,.1);object-fit:cover;background:#1c1926}
+    .name{font-weight:800;font-size:1.25rem;letter-spacing:.2px}
+    .tag{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.08);background:rgba(182,137,255,.08);color:var(--muted);font-size:.85rem}
+    .tag svg{opacity:.9}
+    .bio{color:var(--muted);margin-top:6px;line-height:1.45}
+    .list{display:grid;gap:14px;padding:16px}
+    .btn{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:16px 18px;border-radius:16px;border:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));box-shadow:var(--shadow);transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(0,0,0,.4);border-color:rgba(182,137,255,.45)}
+    .btn:focus-visible{outline:none;box-shadow:0 0 0 6px var(--ring)}
+    .btn-left{display:flex;align-items:center;gap:12px}
+    .btn h3{margin:0;font-size:1rem;letter-spacing:.2px}
+    .btn p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
+    .pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:.85rem;background:rgba(255,255,255,.04)}
+    footer{margin-top:16px;padding:18px;color:#bfb8d8;text-align:center;font-size:.85rem}
+    .social{display:flex;gap:10px;justify-content:center;margin-top:10px}
+    .icon{width:20px;height:20px;opacity:.9}
+    .stars{position:fixed;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:.25}
+    .stars::before,.stars::after{content:"";position:absolute;inset:0;background:radial-gradient(2px 2px at 10% 20%, #fff, transparent 55%),radial-gradient(1.5px 1.5px at 30% 80%, #fff, transparent 55%),radial-gradient(1.5px 1.5px at 60% 30%, #fff, transparent 55%),radial-gradient(2px 2px at 80% 60%, #fff, transparent 55%),radial-gradient(1.5px 1.5px at 50% 50%, #fff, transparent 55%)}
+    .stars::after{transform:translateY(20px)}
+    @media (max-width:480px){.header{padding:18px}.list{padding:12px}.btn{padding:14px 16px}}
+  </style>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="container">
+    <section class="card">
+      <header class="header">
+        <img class="avatar" src="images/profile.jpg" alt="Teija profile" />
+        <div>
+          <div class="name">Teija’s Sacred Offerings</div>
+          <div class="tag">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l1.6 4.4L18 8l-4.4 1.6L12 14l-1.6-4.4L6 8l4.4-1.6L12 2z" stroke="currentColor"/></svg>
+            Readings · Book here
+          </div>
+          <p class="bio">Intuitive guidance • Ritual support • Heart‑centered clarity</p>
+        </div>
+      </header>
+
+      <div class="list">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor"/><path d="M12 5v14M5 12h14" stroke="currentColor"/></svg>
+            <div>
+              <h3>Chakra Reading</h3>
+              <p>Balanced insights through all seven centers.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8" stroke="currentColor"/></svg>
+            <div>
+              <h3>Current Energy Check‑In</h3>
+              <p>What’s active in your field right now.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 7a5 5 0 015 5v4a5 5 0 01-10 0v-4a5 5 0 015-5z" stroke="currentColor"/><path d="M9 5l3-3 3 3" stroke="currentColor"/></svg>
+            <div>
+              <h3>Divine Union Reading</h3>
+              <p>Clarity on connection dynamics & timelines.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 14a7 7 0 0110.7-5.9A5 5 0 1120 14H4z" stroke="currentColor"/></svg>
+            <div>
+              <h3>Dream Interpretation</h3>
+              <p>Symbolic + intuitive meanings from your dreams.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 3l3 6 6 .5-4.5 4 1.2 6L12 17l-5.7 2.5 1.2-6L3 9.5 9 9l3-6z" stroke="currentColor"/></svg>
+            <div>
+              <h3>Spirit Guide Reading</h3>
+              <p>Who’s with you + how they’re communicating.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M4 20V8l8-4 8 4v12H4z M12 4v16" stroke="currentColor"/></svg>
+            <div>
+              <h3>Threshold Reading</h3>
+              <p>Transition support when you’re between worlds.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+          <div class="btn-left">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 12a9 9 0 1118 0 9 9 0 01-18 0zm9-6v6l4 2" stroke="currentColor"/></svg>
+            <div>
+              <h3>1–3 Month Forecast</h3>
+              <p>Short‑range path, pivots, and potentials.</p>
+            </div>
+          </div>
+          <span class="pill">Book</span>
+        </a>
+      </div>
+
+      <footer>
+        <div>Questions or custom requests? Email <a href="mailto:teijachamp@gmail.com">teijachamp@gmail.com</a></div>
+        <div class="social">
+          <a href="https://www.instagram.com/teijchamp?igsh=MWd3NDh0YmRvNHo5Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@divinephoenix444?_r=1&_t=ZT-91IWBPGc0Rz" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M15 3c.5 2.3 2 3.8 4 4v3.2a8 8 0 01-4-1.2v5.8a5 5 0 11-5-5c.4 0 .7 0 1 .1v3.2c-.3-.1-.6-.1-1-.1a2 2 0 102 2V3h3z" stroke="currentColor"/></svg>
+          </a>
+        </div>
+      </footer>
+    </section>
+
+    <p style="text-align:center;color:var(--muted);opacity:.8;margin-top:12px;font-size:.8rem">© <span id="year"></span> Teija’s Sacred Offerings</p>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
