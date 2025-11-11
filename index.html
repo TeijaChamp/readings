@@ -56,8 +56,6 @@
 
     .star {
       position: absolute;
-      width: 8px;
-      height: 8px;
       background: radial-gradient(circle, var(--gold) 0%, rgba(255, 209, 102, 0.1) 80%);
       border-radius: 50%;
       opacity: 0.9;
@@ -71,8 +69,6 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 20px;
-      height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       opacity: 0.9;
       transform: translate(-50%, -50%) rotate(45deg);
@@ -184,10 +180,13 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const starsContainer = document.querySelector('.stars');
-    const numStars = 45; // Reduced number of stars for a lighter look
+    const numStars = 30; // Fewer stars for a calmer look
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
+      const size = 4 + Math.random() * 6; // random sizes between 4px and 10px
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
       star.style.top = Math.random() * 100 + '%';
       star.style.left = Math.random() * 100 + '%';
       star.style.animationDelay = (Math.random() * 5) + 's';
