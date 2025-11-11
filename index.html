@@ -14,8 +14,8 @@
     :root {
       --bg: #f5f4ff;
       --card: #ffffff;
-      --muted: #6a5b89;
-      --text: #3b2e4a;
+      --muted: #7d6c9f;
+      --text: #4b3b66;
       --accent: #b3a0ff;
       --accent-2: #a8e3ff;
       --ring: rgba(163, 147, 255, .35);
@@ -28,7 +28,7 @@
     .container{max-width:740px;margin:0 auto;padding:28px 20px 80px}
     .card{background:var(--card);border:1px solid rgba(0,0,0,.05);box-shadow:var(--shadow);border-radius:24px;margin-bottom:24px}
     .header{display:flex;gap:18px;align-items:center;padding:20px}
-    .avatar{width:80px;height:80px;border-radius:50%;border:2px solid rgba(0,0,0,.1);object-fit:cover;background:#f0f0ff}
+    .avatar{width:80px;height:80px;border-radius:50%;border:2px solid rgba(0,0,0,.1);object-fit:cover;background:#f0f0ff;box-shadow:0 0 15px rgba(176,157,255,0.35)}
     .name{font-weight:800;font-size:1.6rem;letter-spacing:.2px;color:var(--text)}
     .bio{color:var(--muted);margin-top:6px;line-height:1.45;font-size:.95rem}
     h2.section-title{text-align:center;font-size:1.2rem;margin:10px 0;color:var(--text)}
@@ -41,8 +41,9 @@
     .btn p{margin:2px 0 0;color:var(--muted);font-size:.9rem}
     .pill{padding:6px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.1);font-size:.85rem;background:var(--accent);color:white}
     footer{margin-top:16px;padding:18px;color:var(--muted);text-align:center;font-size:.85rem}
-    .social{display:flex;gap:10px;justify-content:center;margin-top:10px}
-    .icon{width:20px;height:20px;opacity:.9;stroke:var(--muted)}
+    .social{display:flex;gap:16px;justify-content:center;margin-top:10px}
+    .icon{width:28px;height:28px;opacity:.9;stroke:var(--muted);transition:all .2s ease}
+    .icon:hover{stroke:var(--accent);filter:drop-shadow(0 0 6px var(--accent));transform:scale(1.08)}
     .addons{padding:0 20px 24px;text-align:center;color:var(--muted);font-size:.9rem}
     @media (max-width:480px){.header{padding:18px}.list{padding:12px}.btn{padding:14px 16px}}
   </style>
