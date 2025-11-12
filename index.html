@@ -113,7 +113,35 @@
 
     .addons{padding:0 20px 24px;text-align:center;color:var(--muted);font-size:.9rem}
 
-    @media (max-width:480px){.header{padding:18px}.list{padding:12px}.btn{padding:14px 16px}}
+    /* Inline form container */
+    .embed {
+      padding: 0 20px 24px;
+    }
+    .embed details {
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      padding: 14px 16px;
+    }
+    .embed summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text);
+      outline: none;
+      list-style: none;
+    }
+    .embed summary::-webkit-details-marker { display:none; }
+    .embed iframe {
+      width: 100%;
+      height: 1200px;
+      border: 0;
+      border-radius: 12px;
+      margin-top: 12px;
+      background: #fff;
+    }
+
+    @media (max-width:480px){.header{padding:18px}.list{padding:12px}.btn{padding:14px 16px}.embed iframe{height: 1400px}}
   </style>
 </head>
 <body>
@@ -149,11 +177,20 @@
 
       <h2 class="section-title">Past Life Readings</h2>
       <div class="list">
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
-          <div class="btn-left"><div><h3>Meditation Journey</h3><p>In depth meditation exploring your past life.</p></div></div><span class="pill">Book</span></a>
+        <!-- Updated to specific Past Life Google Form -->
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSemFkQgQbAjxfckzj96UJIsnEQ-_gOjedQD7txer44ua_XMYA/viewform?usp=publish-editor" target="_blank" rel="noopener">
+          <div class="btn-left"><div><h3>Meditation Journey</h3><p>In-depth meditation exploring your past life.</p></div></div><span class="pill">Book</span></a>
 
-        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd6OrNnSHyIz0i3_L1_W9zzAID3-lKB23J9meIMBsVbk_Ukow/viewform?usp=header" target="_blank" rel="noopener">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSemFkQgQbAjxfckzj96UJIsnEQ-_gOjedQD7txer44ua_XMYA/viewform?usp=publish-editor" target="_blank" rel="noopener">
           <div class="btn-left"><div><h3>Tarot Spread</h3><p>Your past life revealed through intuitive tarot cards.</p></div></div><span class="pill">Book</span></a>
+      </div>
+
+      <!-- Optional inline embed so clients can fill it out without leaving -->
+      <div class="embed">
+        <details>
+          <summary>Or open the Past Life Readings form here</summary>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSemFkQgQbAjxfckzj96UJIsnEQ-_gOjedQD7txer44ua_XMYA/viewform?embedded=true" loading="lazy" allowtransparency="true"></iframe>
+        </details>
       </div>
 
       <div class="addons">
@@ -180,7 +217,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const starsContainer = document.querySelector('.stars');
-    const numStars = 30; // Fewer stars for a calmer look
+    const numStars = 30; // gentle amount
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
@@ -189,6 +226,9 @@
       star.style.height = `${size}px`;
       star.style.top = Math.random() * 100 + '%';
       star.style.left = Math.random() * 100 + '%';
+      // length of rays scales with size
+      const ray = Math.round(size * 2.2);
+      star.style.setProperty('--ray', `${ray}px`);
       star.style.animationDelay = (Math.random() * 5) + 's';
       star.style.animationDuration = (4 + Math.random() * 4) + 's';
       starsContainer.appendChild(star);
