@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Teija’s Readings</title>
-  <meta name="description" content="Book a reading with Teija’s Sacred Offerings." />
+  <meta name="description" content="Book a reading with Divine Phoenix." />
   <meta property="og:title" content="Teija’s Readings" />
-  <meta property="og:description" content="Book a reading with Teija’s Sacred Offerings." />
+  <meta property="og:description" content="Book a reading with Divine Phoenix." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="images/profile.jpg" />
   <meta name="theme-color" content="#d8c6ff" />
@@ -42,7 +42,6 @@
       100% {background-position: 0% 50%;}
     }
 
-    /* ✨ Star Overlay */
     .stars {
       position: fixed;
       top: 0;
@@ -75,9 +74,7 @@
       border-radius: 1px;
     }
 
-    .star::after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
+    .star::after {transform: translate(-50%, -50%) rotate(-45deg);}
 
     @keyframes twinkle {
       0%, 100% { opacity: 0.4; filter: drop-shadow(0 0 3px rgba(255, 209, 102, 0.6)); }
@@ -149,7 +146,6 @@
 
       <h2 class="section-title">Past Life Readings</h2>
       <div class="list">
-        <!-- Updated to specific Past Life Google Form -->
         <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSe39GpEs1oc4kTA9bk955lb5wSnkQGtVL3EXmztJnHYHZ3j9w/viewform?usp=header" target="_blank" rel="noopener">
           <div class="btn-left"><div><h3>Meditation Journey</h3><p>In-depth meditation exploring your past life.</p></div></div><span class="pill">Book</span></a>
 
@@ -162,7 +158,7 @@
       </div>
 
       <footer>
-        <div>Questions or custom requests? Email <a href="mailto:teijachamp@gmail.com">teijachamp@gmail.com</a></div>
+        <div>Questions or custom requests? Email <a href="mailto:thedivinephoenix444@gmail.com">thedivinephoenix444@gmail.com</a></div>
         <div class="social">
           <a href="https://www.instagram.com/teijchamp?igsh=MWd3NDh0YmRvNHo5Mg%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
             <svg class="icon" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
@@ -174,23 +170,22 @@
       </footer>
     </section>
 
-    <p style="text-align:center;color:var(--muted);opacity:.8;margin-top:12px;font-size:.8rem">© <span id="year"></span> Teija’s Sacred Offerings</p>
+    <p style="text-align:center;color:var(--muted);opacity:.8;margin-top:12px;font-size:.8rem">© <span id="year"></span> Divine Phoenix</p>
   </main>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
     const starsContainer = document.querySelector('.stars');
-    const numStars = 30; // gentle amount
+    const numStars = 30;
     for (let i = 0; i < numStars; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
-      const size = 4 + Math.random() * 6; // random sizes between 4px and 10px
+      const size = 4 + Math.random() * 6;
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
       star.style.top = Math.random() * 100 + '%';
       star.style.left = Math.random() * 100 + '%';
-      // length of rays scales with size
       const ray = Math.round(size * 2.2);
       star.style.setProperty('--ray', `${ray}px`);
       star.style.animationDelay = (Math.random() * 5) + 's';
